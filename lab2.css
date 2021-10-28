@@ -2,9 +2,25 @@ body{
     background-color: steelblue;
     padding: 40px;
 }
+p{
+    padding: 40px;
+}
 h1{
     font-size: xx-large;
     font-weight: bold;
     padding-bottom: 40px;
     color:orange
+}
+h2{
+    font-size: larger;
+    font-weight: bold;
+    padding-bottom: 20px;
+    color:orange
+}
+footer{
+    padding: 10px;
+}
+ol{
+    list-style-type:decimal;
+    list-style-position: inside;
 }
