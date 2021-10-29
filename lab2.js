@@ -1,6 +1,7 @@
-'use strict'
+'use strict';
 
-let userResponse1 = prompt("Are you a male?")
+function questions1thru5(){
+  let userResponse1 = prompt("Are you a male?")
 let userResponse1low = userResponse1.toLocaleLowerCase()
 
 let userResponse2 = prompt("Are you from the USA?")
@@ -27,15 +28,19 @@ alert("Thank you for answering this short questionaire, you responded " + (userR
     + " to question 3. You responded " + (userResponse4low)
     + " to question 4 and you responded " + (userResponse5low)
     + " to question 5.")
+}
+questions1thru5();
 
 
   let guessingGameYesOrNo = prompt('Would you like to guess my age?')
 
-    if (guessingGameYesOrNo.toLowerCase() == 'yes'){
-    let correctAnswer = 29;
-    let userGuess = prompt('Between 1-100, how old do you think I am?')
+  if (guessingGameYesOrNo.toLowerCase() == 'yes'){
+    function question6() {
+      let correctAnswer = 29;
+      let userNum = prompt('Between 1-100, how old do you think I am?')
+      let userGuess = parseInt(userNum)
 
-    
+  
 
     for(let i = 3; i > 0; i--) {
       if(userGuess < correctAnswer){
@@ -48,38 +53,42 @@ alert("Thank you for answering this short questionaire, you responded " + (userR
     }
     if(userGuess != correctAnswer)
       alert('Sorry you are incorrect, the answer was 29')
+    } 
+    question6();
+}
+
+  function question7() {
+    let favFruit = ['peaches','passionfruit'];
+    let maxAttempts = 6;
+    let correctA = false;
+
+    for (let count = 1; count <= maxAttempts; count+=1) {
+
+      let response = prompt('What are one of my favorite fruits?');
+
+      for (let i = 0; i < favFruit.length; i +=1) {
+        let fav = favFruit[i, i+1];
+        if (fav === response) {
+          alert('Congrats, that is correct!');
+          correctA = true;
+          break;
+        } else if (fav != response) {
+          alert('Sorry, that is incorrect');
+          break;
+        }
+      }
+      if (correctA) {
+        break;
+      }
+    }
+
+    alert('My favorites fruits are ' + favFruit);
   }
-//   let guessingGame2YesOrNo = prompt('Would you like to play another guessing game?')
-
-//     if (guessingGameYesOrNo.toLowerCase() == 'yes'){
-//     let correctAnswer2 = 
-//     let fruit = ['oranges','bananas','apples','mangoes','strawberries','pineapples','passionfruit','peaches','watermelon','grapes','lemons','cherries'];
-
-// let index = fruit.length-1;
-// console.log(fruit[2])
-
-// for(let i=0; i < fruit.length; i+=1){
-//   console.log(fruit[i])
-// }
-
-
-// let containsFruit = false
-// let targetFruit = 'limes'
-
-// for (let i = 0; i < fruit.length; i+=1) {
-//   let currentFruit = fruit[i];
-//   if(currentfruit = 'limes') {
-//     containsFruit = true;
-//     break;
-//   }
-// }
-
-// console.log('Contains Limes', containsFruit)
-//     }
+  question7();
 
 
 
-  let username = prompt("What may I call you?")
-  alert("Welcome " + username + ", this is my lab2 site for Code Fellows 201.")
-  console.log("User response to username was " + username)
-  alert("Now, " + username + ", here is a bit about myself.")
+let username = prompt("What may I call you?")
+alert("Welcome " + username + ", this is my lab2 site for Code Fellows 201.")
+console.log("User response to username was " + username)
+alert("Now, " + username + ", here is a bit about myself.")
