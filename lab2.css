@@ -1,6 +1,8 @@
 body{
-    background-color: steelblue;
+    background-color:rgba(44,78,74,255);
+    color: rgb(148, 97, 3);
     padding: 40px;
+    text-align: center;
 }
 p{
     padding: 40px;
@@ -8,14 +10,17 @@ p{
 h1{
     font-size: xx-large;
     font-weight: bold;
-    padding-bottom: 40px;
-    color:orange
+    padding: 40px;
+    color:rgb(201, 131, 3);
+
 }
 h2{
     font-size: larger;
     font-weight: bold;
+    padding-top: 40px;
     padding-bottom: 20px;
-    color:orange
+    color:rgb(201, 131, 3);
+
 }
 footer{
     padding: 10px;
